@@ -1,0 +1,14 @@
+1. echo "ESTA LÍNEA ES LA PRIMERA EN MAYÚSCULAS EN ESTE FICHERO
+esta línea es la primera en minúsculas en este fichero
+Esta Línea Tiene Todas Las Primeras Letras De Cada Palabra En Mayúsculas
+La línea encima de esta está en blanco
+Esta es la última línea" > demo.txt 
+
+2. cat demo.txt | grep "esta"
+
+3. cat demo.txt | grep -i "línea"
+
+4. mkdir prueba | cp demo.txt prueba/
+mv demo.txt demo2.txt
+grep -r "línea"
+

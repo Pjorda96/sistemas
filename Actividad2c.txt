@@ -1,0 +1,13 @@
+1../procesar 1 | grep -A 7 -B 1 "SEMANAS" > file1
+./procesar 1 | grep -A 7 -B 1 "EDIFICIO" >> file1
+
+2. cat file1 | grep -A 7 "EDIFICIO A"| grep -v "*" > a
+cat file1 | grep -A 7 "EDIFICIO D"| grep -v "*" > d
+cat file1 | grep -A 7 "SEMANA"| grep -v "*" > s
+
+3. ./procesar 2 | grep -i "total" > file2
+./procesar 1 | grep "X" >> file2
+./procesar 2 | grep -v "*" >> file2
+
+4. cat file2 | awk '{print $1"\t"$2"\t"$4}' > rest1
+cat rest1 | grep -v "L" | grep "1.0" > res1

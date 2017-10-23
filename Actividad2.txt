@@ -1,0 +1,15 @@
+1. ls /dev/tty*
+2. ls tty*
+3. ls /dev/tty??
+4. ls tty??
+5. ls tty* && tty??
+6. mkdir ventasdelaempresa marketingdelaempresa desarrollodelaempresa derecciondelaempresa       Sí
+7. con mkdir a b c se crean 3 directorios distintos y mkdir a/b/c crea un directorio c dentro de un directorio b dentro de un directorio a
+8. touch enero.txt febrero.txt marzo.txt
+9. cp ventasdelaempresa/* marketingdelaempresa/    Sí
+10. mkdir ../ventasdelaempresa/2016      mv * ../ventasdelaempresa/2016
+11. mkdir 2015     cp *ero.txt 2015
+12. mkdir ventas_2015      cp ../ventasdelaempresa/2015/* ventas_2015
+13. rm -rf ../ventasdelaempresa/2015
+14. mv desarrollodelaempresa/ventas_2015/ desarrollodelaempresa/ventas2015
+15. mv ../desarrollodelaempresa/ventas2015/ ../desarrollodelaempresa/v2015

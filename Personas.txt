@@ -1,0 +1,11 @@
+1. touch personas	cat personas
+2. echo "pablo juanmi" >>personas.txt
+3. sort -r personas
+4. touch ventasdelaempresa/concatenados | cat ventasdelaempresa/2016/enero.txt febrero.txt marzo.txt >ventasdelaempresa/concatenados.txt
+5. touch direcciondelaempresa/concatena2 | cat direcciondelaempresa/2016/enero.txt febrero.txt marzo.txt > direcciondelaempresa/concatena2.txt
+6. ls -l /lib/lib* > desarrollodelaempresa/librerias.txt
+7. wc -l librerias.txt
+8. cat librerias.txt | grep "0.0.0"
+9. cat librerias.txt | head -5 | tail -3
+10. ls -l /lib/lib* | grep "0.0.0" | head -5 | tail -3
+11. | ejecuta todos los comandos pero solo muestra el último resultado y && muestra por pantalla cada resultados del comando que ejecuta
