@@ -12,3 +12,6 @@ Esta es la última línea" > demo.txt
 mv demo.txt demo2.txt
 grep -r "línea"
 
+5. grep "línea "
+
+6. grep -v "línea"
