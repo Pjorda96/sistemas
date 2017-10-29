@@ -8,10 +8,19 @@ Esta es la última línea" > demo.txt
 
 3. cat demo.txt | grep -i "línea"
 
-4. mkdir prueba | cp demo.txt prueba/
+4. mkdir prueba
+cp demo.txt prueba/
 mv demo.txt demo2.txt
-grep -r "línea"
+grep -r "línea" /home/pablo/
 
-5. grep "línea "
+5. grep "línea.*blanco"
 
-6. grep -v "línea"
+6. grep -v "línea.*Todas"
+
+7. grep "línea" | wc -l
+
+8. cat demo2.txt | grep -n "línea"
+
+9. grep "línea"
+
+10. du -s * | 
