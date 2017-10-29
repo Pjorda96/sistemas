@@ -23,4 +23,10 @@ grep -r "línea" /home/pablo/
 
 9. grep "línea"
 
-10. du -s * | 
+10. du -s * | sed "s/\(.*\)\([\t].*[a-z]\)/\2:\1/"
+
+11. du -s * | sed "s/\(.*\)\([\t].*[a-z]\)/\2:\1/"
+
+12. cat partido.txt | grep "Match Odds" | grep Th | sed "s/ /--/g" | sed "s/,/ /g" | awk '{print $10" "$16" "$12}' > empate
+cat partido.txt | grep "Match Odds" | grep Aston | sed "s/ /--/g" | sed "s/,/ /g" | awk '{print $10" "$16" "$12}' > "Aston Villa"
+cat partido.txt | grep "Match Odds" | grep -v Th | grep -v Aston | sed "s/ /--/g" | sed "s/,/ /g" | awk '{print $10" "$16" "$12}' > Tottenham
