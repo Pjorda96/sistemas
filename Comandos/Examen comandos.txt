@@ -1,0 +1,14 @@
+1. ls -a /lib/
+2. ls /etc/ma*
+3. ls -l /lib/
+4. cp /bin/*tf* Descargas/
+5. cat seleccion.txt | grep -n guadasequies
+cat seleccion.txt | tail -13 > nuevo.txt
+6. cat al.txt | grep -v C > todos_juntos.txt
+cat beni.txt | grep -v C >> todos_juntos.txt
+7. cat pobles.txt | awk '{print $3" "$4}' | grep 4 | awk '{print $2}'
+8. cat pobles.txt | awk '{print $2" "$4}' | grep ".*7" | awk '{print $2}'
+9. cat pobles.txt |  awk '{print $4}' | grep "^f.*a$"
+10. cat seleccion.txt | tail -5 | sort -r
+11. echo -n "El total de pueblos es: " > resultado.txt
+cat seleccion.txt | wc -l >> resultado.txt
