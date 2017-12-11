@@ -13,3 +13,9 @@ ls -l
 5. touch ventas_trimestre.txt
 chmod 664 ventas_trimestre.txt
 su - pablo2
+6. su - alba
+touch empleados.txt
+chmod 777 empleados.txt
+7. exit
+cp /home/alba/empleados.txt .
+ls -l
