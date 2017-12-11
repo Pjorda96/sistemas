@@ -1,0 +1,15 @@
+1. sudo groupadd oficina1
+sudo groupadd oficina2
+emacs /etc/group &
+2. sudo adduser pedro --ingroup oficina1
+sudo adduser pablo2 --ingroup oficina1
+emacs /etc/passwd &
+3. sudo adduser alba --ingroup oficina2
+sudo adduser nerea --ingroup oficina2
+emacs /etc/passwd &
+4. touch topsecret.txt
+chmod 600 topsecret.txt
+ls -l
+5. touch ventas_trimestre.txt
+chmod 664 ventas_trimestre.txt
+su - pablo2
