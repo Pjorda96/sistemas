@@ -19,3 +19,40 @@ chmod 777 empleados.txt
 7. exit
 cp /home/alba/empleados.txt .
 ls -l
+8. su - pablo2
+cp /usr/bin/ncal pablo2ncal
+ls -l
+./pablo2ncal
+9. chmod go-x pablo2ncal
+ls -l
+exit
+10. su - nerea
+mkdir compartido
+11. echo "algunas lineas" > compartido/telefonos.txt
+echo "algunas lineas" > compartido/gastos.txt
+echo "algunas lineas" > compartido/sueldos.txt
+12. chmod g+w compartido/telefonos.txt
+ls -l compartido/
+13. chmod 644 compartido/gastos.txt
+ls -l compartido/
+14. chmod 600 compartido/sueldos.txt
+ls -l compartido/
+15. chmod 500 compartido/
+su - alba
+cat /home/nerea/compartido/gastos.txt
+exit
+16. chmod 540 compartido/
+su - alba
+cat /home/nerea/compartido/gastos.txt
+exit
+17. chmod g+x compartido/
+su - alba
+cat /home/nerea/compartido/gastos.txt
+exit
+18. chmod g-r compartido/
+su - alba
+cat /home/nerea/compartido/gastos.txt
+ls /home/nerea/compartido/
+exit
+19. 
+20. 
