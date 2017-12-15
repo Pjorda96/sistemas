@@ -55,15 +55,9 @@ cat /home/nerea/compartido/gastos.txt
 ls /home/nerea/compartido/
 exit
 19. sudo adduser pablo oficina1
-
 sudo emacs /etc/group
-
 20. sudo groupdel oficina2
-
 21. sudo chown pablo:oficina2 empleados.txt (o) sudo chgrp oficina2 empleados.txt
-
 22. (entrar primero al usuario alba si no se ha utilizado useradd -m)
-
 sudo userdel alba
-
 ls -l (tercera columna, $3)
