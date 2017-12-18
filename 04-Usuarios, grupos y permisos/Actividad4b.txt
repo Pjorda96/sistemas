@@ -1,0 +1,33 @@
+1. sudo adduser manolo
+sudo chmod 744 /home/manolo
+sudo adduser ana
+sudo chmod 744 /home/ana
+sudo adduser julia
+sudo chmod 744 /home/julia
+sudo adduser sergio
+sudo chmod 744 /home/sergio
+sudo adduser andrea
+sudo chmod 744 /home/andrea
+sudo adduser jordi
+sudo chmod 744 /home/jordi
+sudo adduser rana
+sudo chmod 744 /home/rana
+2. sudo mkdir /home/interfaz
+sudo addgroup desarrolladores
+sudo addgroup programadores
+sudo adduser ana desarrolladores
+sudo adduser julia desarrolladores
+sudo adduser sergio programadores
+sudo adduser andrea programadores
+sudo chgrp desarrolladores /home/interfaz/
+sudo chmod g+w /home/interfaz/
+(ana y julia pueden leer y escribir porque pertenecen al grupo y el resto pueden leer)
+3. sudo mkdir /home/bbdd
+sudo chgrp desarrolladores /home/interfaz/
+sudo chmod g+w /home/bbdd/
+(sergio y andrea pueden leer y escribir porque pertenecen al grupo y el resto pueden leer)
+4. sudo mkdir /home/marketing
+sudo addgroup marketing
+sudo adduser jordi marketing
+sudo adduser rana marketing
+5. 
