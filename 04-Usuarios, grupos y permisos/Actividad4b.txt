@@ -30,4 +30,22 @@ sudo chmod g+w /home/bbdd/
 sudo addgroup marketing
 sudo adduser jordi marketing
 sudo adduser rana marketing
-5. 
+5. sudo mkdir /home/organizacion
+sudo addgroup organizacion
+sudo chgrp organizacion /home/organizacion/
+sudo adduser ana organizacion
+sudo adduser sergio organizacion
+(es incompatible que Ana y Sergio puedan leer y escribir, Julia y Andrea solo leer y el resto nada)
+6. sudo mkdir /home/proyecto
+sudo chmod 750 /home/proyecto
+7. sudo mkdir /home/reuniones
+sudo chmod 770 /home/reuniones/
+8. sudo chmod g-w /home/reuniones/
+9. sudo touch /home/interfaz/diario.txt
+sudo chmod 740 /home/interfaz/diario.txt
+sudo cp /home/interfaz/diario.txt /home/bbdd/diario.txt
+sudo cp /home/bbdd/diario.txt /home/marketing/diario.txt
+sudo chown manolo /home/interfaz/
+sudo chown manolo /home/bbdd/
+sudo chown manolo /home/marketing/
+10. 
