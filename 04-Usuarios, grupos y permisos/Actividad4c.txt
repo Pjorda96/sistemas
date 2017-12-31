@@ -1,0 +1,15 @@
+1. sudo adduser manolo
+sudo chmod 1744 /home/manolo
+sudo adduser ana
+sudo chmod 1744 /home/ana
+sudo adduser julia
+sudo chmod 1744 /home/julia
+sudo adduser sergio
+sudo chmod 1744 /home/sergio
+sudo adduser andrea
+sudo chmod 1744 /home/andrea
+sudo adduser jordi
+sudo chmod 1744 /home/jordi
+sudo adduser rana
+sudo chmod 1744 /home/rana
+2. 
