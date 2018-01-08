@@ -15,7 +15,7 @@ chmod 664 ventas_trimestre.txt
 su - pablo2
 6. su - alba
 touch empleados.txt
-chmod 777 empleados.txt
+chmod 664 empleados.txt
 7. exit
 cp /home/alba/empleados.txt .
 ls -l
@@ -37,11 +37,11 @@ ls -l compartido/
 ls -l compartido/
 14. chmod 600 compartido/sueldos.txt
 ls -l compartido/
-15. chmod 500 compartido/
+15. chmod 700 compartido/
 su - alba
 cat /home/nerea/compartido/gastos.txt
 exit
-16. chmod 540 compartido/
+16. chmod 750 compartido/
 su - alba
 cat /home/nerea/compartido/gastos.txt
 exit
