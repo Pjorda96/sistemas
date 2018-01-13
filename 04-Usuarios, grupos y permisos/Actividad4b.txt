@@ -1,17 +1,17 @@
 1. sudo adduser manolo
-sudo chmod 744 /home/manolo
+sudo chmod 700 /home/manolo
 sudo adduser ana
-sudo chmod 744 /home/ana
+sudo chmod 700 /home/ana
 sudo adduser julia
-sudo chmod 744 /home/julia
+sudo chmod 700 /home/julia
 sudo adduser sergio
-sudo chmod 744 /home/sergio
+sudo chmod 700 /home/sergio
 sudo adduser andrea
-sudo chmod 744 /home/andrea
+sudo chmod 700 /home/andrea
 sudo adduser jordi
-sudo chmod 744 /home/jordi
+sudo chmod 700 /home/jordi
 sudo adduser rana
-sudo chmod 744 /home/rana
+sudo chmod 700 /home/rana
 2. sudo mkdir /home/interfaz
 sudo addgroup desarrolladores
 sudo addgroup programadores

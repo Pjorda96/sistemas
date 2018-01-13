@@ -1,15 +1,53 @@
 1. sudo adduser manolo
-sudo chmod 1744 /home/manolo
+sudo chmod 1700 /home/manolo
 sudo adduser ana
-sudo chmod 1744 /home/ana
+sudo chmod 1700 /home/ana
 sudo adduser julia
-sudo chmod 1744 /home/julia
+sudo chmod 1700 /home/julia
 sudo adduser sergio
-sudo chmod 1744 /home/sergio
+sudo chmod 1700 /home/sergio
 sudo adduser andrea
-sudo chmod 1744 /home/andrea
+sudo chmod 1700 /home/andrea
 sudo adduser jordi
-sudo chmod 1744 /home/jordi
+sudo chmod 1700 /home/jordi
 sudo adduser rana
-sudo chmod 1744 /home/rana
-2. 
+sudo chmod 1700 /home/rana
+2. sudo mkdir /home/interfaz
+sudo addgroup desarrolladores
+sudo addgroup programadores
+sudo adduser ana desarrolladores
+sudo adduser julia desarrolladores
+sudo adduser sergio programadores
+sudo adduser andrea programadores
+sudo chgrp desarrolladores /home/interfaz/
+sudo chmod g+w /home/interfaz/
+sudo chmod g\s /home/interfaz/
+(ana y julia pueden leer y escribir porque pertenecen al grupo y el resto pueden leer)
+3. sudo mkdir /home/bbdd
+sudo chgrp desarrolladores /home/interfaz/
+sudo chmod g+w g\s /home/bbdd/
+(sergio y andrea pueden leer y escribir porque pertenecen al grupo y el resto pueden leer)
+4. sudo mkdir /home/marketing
+sudo addgroup marketing
+sudo chmod g\s /home/marketing
+sudo adduser jordi marketing
+sudo adduser rana marketing
+5. sudo mkdir /home/organizacion
+sudo addgroup organizacion
+sudo chgrp organizacion /home/organizacion/
+sudo chmod g\s /home/organizacion/
+sudo adduser ana organizacion
+sudo adduser sergio organizacion
+(es incompatible que Ana y Sergio puedan leer y escribir, Julia y Andrea solo leer y el resto nada)
+6. sudo mkdir /home/proyecto
+sudo chmod 1750 /home/proyecto
+7. sudo mkdir /home/reuniones
+sudo chmod 2770 /home/reuniones/
+8. sudo chmod \t /home/reuniones/
+9. sudo touch /home/interfaz/diario.txt
+sudo chmod 740 /home/interfaz/diario.txt
+sudo cp /home/interfaz/diario.txt /home/bbdd/diario.txt
+sudo cp /home/bbdd/diario.txt /home/marketing/diario.txt
+sudo chown manolo /home/interfaz/
+sudo chown manolo /home/bbdd/
+sudo chown manolo /home/marketing/
