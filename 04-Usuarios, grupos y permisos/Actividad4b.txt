@@ -1,17 +1,17 @@
 1. sudo adduser manolo
-sudo chmod 700 /home/manolo
+sudo chmod 744 /home/manolo
 sudo adduser ana
-sudo chmod 700 /home/ana
+sudo chmod 744 /home/ana
 sudo adduser julia
-sudo chmod 700 /home/julia
+sudo chmod 744 /home/julia
 sudo adduser sergio
-sudo chmod 700 /home/sergio
+sudo chmod 744 /home/sergio
 sudo adduser andrea
-sudo chmod 700 /home/andrea
+sudo chmod 744 /home/andrea
 sudo adduser jordi
-sudo chmod 700 /home/jordi
+sudo chmod 744 /home/jordi
 sudo adduser rana
-sudo chmod 700 /home/rana
+sudo chmod 744 /home/rana
 2. sudo mkdir /home/interfaz
 sudo addgroup desarrolladores
 sudo addgroup programadores
@@ -35,12 +35,15 @@ sudo addgroup organizacion
 sudo chgrp organizacion /home/organizacion/
 sudo adduser ana organizacion
 sudo adduser sergio organizacion
+sudo chmod g+w /home/organizacion
 (es incompatible que Ana y Sergio puedan leer y escribir, Julia y Andrea solo leer y el resto nada)
 6. sudo mkdir /home/proyecto
+sudo addgroup proyecto
+meter todos en grupo proyecto
 sudo chmod 750 /home/proyecto
 7. sudo mkdir /home/reuniones
 sudo chmod 770 /home/reuniones/
-8. sudo chmod g-w /home/reuniones/
+8. (no se puede)
 9. sudo touch /home/interfaz/diario.txt
 sudo chmod 740 /home/interfaz/diario.txt
 sudo cp /home/interfaz/diario.txt /home/bbdd/diario.txt
