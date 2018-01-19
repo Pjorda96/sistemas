@@ -1,0 +1,24 @@
+1. sudo addgroup cuartos
+sudo adduser cristiano --ingroup cuartos
+sudo adduser karim --ingroup cuartos
+sudo adduser zizou
+sudo adduser zizou cuartos
+sudo adduser james
+sudo adduser morata
+
+2. su - cristiano
+mkdir llorones
+chmod 750 llorones/
+(no se puede hacer nada más desde el usuario cristiano)
+exit
+(para poder hacer lo que se pide se debería modificar el usuario root)
+sudo chown zizou:cuartos /home/cristiano/llorones/
+
+3. Al principio el usuario "cristiano" no podría crear ficheros ya que no está en el grupo "buenos" y "otros" no tienen permisos ni de escritura ni de ejecución.
+Después de incluirlo tampoco podría ya que necesita el permiso de escritura y el de ejecución a la vez para poder crear ficheros.
+
+4. Si juanmi pertenece al grupo administraadores sí podría modificarlo. Si no pertenece no podrá modificarlo.
+Para permitirlo podría ejecutarse el comando "sudo chmod 777 /..ubicacionDocs../Documentos" y "sudo chmod 666 /..ubicacionDocs../Documentos/documento.txt" si no se quiere incluir a "juanmi" al grupo administradores (pero todos los usuarios podrían modificar el fichero) o usar "sudo adduser juanmi administradores" para incluir al usuario "juanmi" al grupo "administradores" que ya pueden modificar.
+
+5. rm -rf /..ubicacionpersonal../personal/fichero
+como el fichero "fichero" está dentro del directorio "personal" que pertenece al usuario "usuario" y el directorio "personal" tiene los permisos de escritura y ejecución para el usuario "usuario" entonces el usuario "usuario" puede borrar los ficheros del directorio "personal" sean cuales sean los permisos del fichero "fichero".
