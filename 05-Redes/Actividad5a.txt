@@ -36,3 +36,100 @@ rtt min/avg/max/mdev = 52.828/59.646/62.708/3.512 ms
 villa-marrakech	
 la diferencia de tiempo es considerable ya que p.e. a Italia 59.646 de media pero a Melbourne 310.052 de media
 
+6. Traza a la dirección www.bioparcvalencia.es [37.46.74.216]
+sobre un máximo de 30 saltos:
+
+  1    <1 ms    <1 ms    <1 ms  192.168.0.1
+  2     *        *        *     Tiempo de espera agotado para esta solicitud.
+  3     9 ms     8 ms     9 ms  172.29.166.2
+  4     9 ms     9 ms     9 ms  172.29.166.1
+  5     *        *        *     Tiempo de espera agotado para esta solicitud.
+  6    16 ms    13 ms    15 ms  172.29.33.102
+  7    20 ms    20 ms    19 ms  adam.baja.espanix.net [193.149.1.105]
+  8    22 ms    21 ms    20 ms  v219-sw1-106-mad.adam.es [87.236.216.70]
+  9    20 ms    21 ms    20 ms  servidor.inetserver.com.es [37.46.74.216]
+
+Traza completa.
+
+Traza a la dirección www.neworleansbandbs.com [54.152.88.1]
+sobre un máximo de 30 saltos:
+
+  1    <1 ms    <1 ms    <1 ms  192.168.0.1
+  2     *        *        *     Tiempo de espera agotado para esta solicitud.
+  3     9 ms     9 ms     9 ms  172.29.166.2
+  4     *        8 ms    10 ms  172.29.166.1
+  5     *        *        *     Tiempo de espera agotado para esta solicitud.
+  6    18 ms    18 ms    20 ms  ae7-100-xcr1.mat.cw.net [195.10.44.1]
+  7   119 ms   109 ms   111 ms  ae8-xcr1.ptl.cw.net [195.2.8.105]
+  8   107 ms   106 ms   106 ms  et-7-1-0-xcr1.nyh.cw.net [195.2.24.241]
+  9   109 ms   111 ms   108 ms  ae13-xcr2.nyk.cw.net [195.2.25.69]
+ 10   109 ms   110 ms   109 ms  52.95.216.78
+ 11   121 ms   114 ms   109 ms  52.93.4.79
+ 12   110 ms   110 ms   107 ms  52.93.4.56
+ 13   114 ms   112 ms   113 ms  54.239.44.218
+ 14     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 15     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 16     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 17   116 ms   113 ms   115 ms  54.239.110.155
+ 18   118 ms   114 ms   116 ms  52.93.26.50
+ 19   114 ms   143 ms   126 ms  52.93.27.225
+ 20   110 ms   114 ms   120 ms  72.21.220.13
+ 21     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 22     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 23     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 24     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 25     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 26     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 27     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 28     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 29     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 30     *        *        *     Tiempo de espera agotado para esta solicitud.
+
+Traza completa.
+
+Traza a la dirección www.visitvictoria.com [117.53.167.33]
+sobre un máximo de 30 saltos:
+
+  1    <1 ms    <1 ms    <1 ms  192.168.0.1
+  2     *        *       15 ms  10.4.5.193
+  3     8 ms     8 ms    10 ms  172.29.166.2
+  4     *        *        8 ms  172.29.166.1
+  5     *        *        *     Tiempo de espera agotado para esta solicitud.
+  6    18 ms    19 ms    19 ms  ae7-100-xcr1.mat.cw.net [195.10.44.1]
+  7    14 ms    12 ms    14 ms  ae1-xcr1.mal.cw.net [195.2.30.185]
+  8    12 ms    13 ms    12 ms  as3257-gw-mal.cw.net [195.2.24.58]
+  9   183 ms   180 ms   182 ms  xe-1-0-0.cr0-sjc2.ip4.gtt.net [89.149.130.254]
+ 10   180 ms   179 ms   181 ms  173.205.35.2
+ 11   348 ms   349 ms   348 ms  bundle-153.cor02.sjc01.ca.vocus.net [49.255.255.24]
+ 12   321 ms   322 ms   321 ms  BE-201.cor02.syd04.nsw.VOCUS.net.au [49.255.255.13]
+ 13   323 ms   322 ms   322 ms  bundle-101.bdr01.syd03.nsw.vocus.net.au [114.31.192.87]
+ 14   335 ms   335 ms   337 ms  asn17732.cust.bdr03.syd04.nsw.vocus.net.au [175.45.124.234]
+ 15   346 ms   349 ms   347 ms  Vl8-0.ds04.syd07.aunsw.bltprf.net [117.53.160.4]
+ 16   347 ms   348 ms   346 ms  33-167-53-117.rev.bulletproof.net [117.53.167.33]
+
+Traza completa.
+
+No se puede resolver el nombre del sistema de destino www.pantanalecoexplorer.com.br.
+
+Traza a la dirección www.motelsalaria.it [185.33.7.85]
+sobre un máximo de 30 saltos:
+
+  1     3 ms    <1 ms    <1 ms  192.168.0.1
+  2    13 ms     *        *     10.4.5.193
+  3     9 ms     9 ms    10 ms  172.29.166.2
+  4     *        *        9 ms  172.29.166.1
+  5     *        *        *     Tiempo de espera agotado para esta solicitud.
+  6    18 ms    18 ms    19 ms  ae7-100-xcr1.mat.cw.net [195.10.44.1]
+  7    14 ms    14 ms    12 ms  ae1-xcr1.mal.cw.net [195.2.30.185]
+  8    13 ms    13 ms    13 ms  as3257-gw-mal.cw.net [195.2.24.58]
+  9    41 ms    42 ms    50 ms  et-0-0-4-2.cr10-lon1.ip4.gtt.net [89.149.137.142]
+ 10    42 ms    42 ms    41 ms  ip4.gtt.net [46.33.78.70]
+ 11    49 ms    47 ms    48 ms  10ge.xe-2-0-2.por-5ltp1ops-dis-3.peer1.net [216.187.120.138]
+ 12    49 ms    55 ms    48 ms  83.222.225.160
+ 13    49 ms    48 ms    48 ms  dom128.dominiando.net [185.33.7.85]
+
+Traza completa.
+
+No se puede resolver el nombre del sistema de destino www.villa-marrakech.ma.
+
+7. 
