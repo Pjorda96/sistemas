@@ -132,4 +132,16 @@ Traza completa.
 
 No se puede resolver el nombre del sistema de destino www.villa-marrakech.ma.
 
-7. 
+7. unix  3      [ ]         FLUJO      CONECTADO     12440    
+unix  3      [ ]         FLUJO      CONECTADO     12181    @/tmp/.X11-unix/X0
+unix  3      [ ]         FLUJO      CONECTADO     12414    
+unix  3      [ ]         FLUJO      CONECTADO     12929    
+unix  3      [ ]         FLUJO      CONECTADO     12538    @/tmp/dbus-BRvxbodDxK
+unix  3      [ ]         FLUJO      CONECTADO     13213    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     9296     /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     13365    
+unix  3      [ ]         FLUJO      CONECTADO     12424    
+unix  3      [ ]         FLUJO      CONECTADO     9196     /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     7603     
+unix  3      [ ]         FLUJO      CONECTADO     14310    @/tmp/dbus-BRvxbodDxK
+unix  3      [ ]         FLUJO      CONECTADO     13334    @/tmp/.X11-unix/X0
