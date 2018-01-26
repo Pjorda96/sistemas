@@ -25,7 +25,8 @@ ping www.google.es
 funcionarán pero sin respuesta
 no funcionarán
 
-5. bioparc	37.46.74.216	5 packets transmitted, 5 received, 0% packet loss, time 4007ms
+5. ping -c 5
+bioparc	37.46.74.216	5 packets transmitted, 5 received, 0% packet loss, time 4007ms
 rtt min/avg/max/mdev = 25.820/31.765/44.023/6.667 ms
 neworleansbandbs	54.152.88.1	5 packets transmitted, 0 received, 100% packet loss, time 4028ms
 visitvictoria	117.53.167.33	5 packets transmitted, 5 received, 0% packet loss, time 4007ms
@@ -36,7 +37,8 @@ rtt min/avg/max/mdev = 52.828/59.646/62.708/3.512 ms
 villa-marrakech	
 la diferencia de tiempo es considerable ya que p.e. a Italia 59.646 de media pero a Melbourne 310.052 de media
 
-6. Traza a la dirección www.bioparcvalencia.es [37.46.74.216]
+6. traceroute 
+Traza a la dirección www.bioparcvalencia.es [37.46.74.216]
 sobre un máximo de 30 saltos:
 
   1    <1 ms    <1 ms    <1 ms  192.168.0.1
@@ -132,16 +134,11 @@ Traza completa.
 
 No se puede resolver el nombre del sistema de destino www.villa-marrakech.ma.
 
-7. unix  3      [ ]         FLUJO      CONECTADO     12440    
-unix  3      [ ]         FLUJO      CONECTADO     12181    @/tmp/.X11-unix/X0
-unix  3      [ ]         FLUJO      CONECTADO     12414    
-unix  3      [ ]         FLUJO      CONECTADO     12929    
-unix  3      [ ]         FLUJO      CONECTADO     12538    @/tmp/dbus-BRvxbodDxK
-unix  3      [ ]         FLUJO      CONECTADO     13213    /var/run/dbus/system_bus_socket
-unix  3      [ ]         FLUJO      CONECTADO     9296     /var/run/dbus/system_bus_socket
-unix  3      [ ]         FLUJO      CONECTADO     13365    
-unix  3      [ ]         FLUJO      CONECTADO     12424    
-unix  3      [ ]         FLUJO      CONECTADO     9196     /var/run/dbus/system_bus_socket
-unix  3      [ ]         FLUJO      CONECTADO     7603     
-unix  3      [ ]         FLUJO      CONECTADO     14310    @/tmp/dbus-BRvxbodDxK
-unix  3      [ ]         FLUJO      CONECTADO     13334    @/tmp/.X11-unix/X0
+7. netstat -s
+Ip:
+    146 total de paquetes recibidos
+    0 reenviados
+    0 paquetes entrantes desechados
+    144 paquetes entrantes servidos
+    164 peticiones enviadas
+    4 descartados debido a una ruta inexistente
