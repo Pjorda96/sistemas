@@ -1,6 +1,0 @@
-read "Introduce un valor para X" x
-
-read "Introduce un valor para Y" y
-
-echo $x
-echo $y
