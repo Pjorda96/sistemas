@@ -1,0 +1,8 @@
+read -p "Introduce un número" x
+suma=0
+contador=1
+
+while [ $x -ne 0 ]; do
+    
+    read -p "Introduce un número: " x
+done
