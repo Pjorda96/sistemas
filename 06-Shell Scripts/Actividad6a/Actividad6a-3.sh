@@ -1,10 +1,14 @@
 read -p "Escribe tu nota: " x
 
-while [ $x -lt 0 ]; do
-    read -p "Escribe un número entre 0 y 10: " x
-done
+#while [ $x -lt 0 ]; do
+#    read -p "Escribe un número entre 0 y 10: " x
+#done
 
-while [ $x -gt 10 ]; do
+#while [ $x -gt 10 ]; do
+#    read -p "Escribe un número entre 0 y 10: " x
+#done
+
+while [ $x -gt 10 ] || [ $x -lt 0 ]; do
     read -p "Escribe un número entre 0 y 10: " x
 done
 
