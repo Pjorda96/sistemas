@@ -5,7 +5,6 @@ precio=0
 if [ $x -le 50 ]; then
     precio=20
 else
-    
     precio=20
     x=$(echo "scale=2; $x - 50" | bc)
 
