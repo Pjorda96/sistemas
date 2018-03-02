@@ -14,18 +14,12 @@ done
 
 if [ $x -lt 5 ]; then
     echo "Suspendido"
+elif [ $x -lt 6 ]; then
+    echo "Aprobado"
+elif [ $x -lt 7 ]; then
+    echo "Bien"
+elif [ $x -lt 9 ]; then
+    echo "Notable"
 else
-    if [ $x -lt 6 ]; then
-	echo "Aprobado"
-    else
-	if [ $x -lt 7 ]; then
-	    echo "Bien"
-	else
-	    if [ $x -lt 9 ]; then
-		echo "Notable"
-	    else
-		echo "Sobresaliente"
-	    fi
-	fi
-    fi
+    echo "Sobresaliente"
 fi
