@@ -1,1 +1,1 @@
-sudo chmod +x Actividad6b-$1.sh
+sudo chmod +x script$1.sh
