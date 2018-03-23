@@ -6,6 +6,6 @@ for i in $(cat precipitaciones.txt | awk '{print $2}'); do
     cont=$((cont + 1))
 done
 
-media=$((suma/cont))
+media=`echo "scale=2; $suma/$cont" | bc`
 
 echo "La media de precipitaciones es $media"
