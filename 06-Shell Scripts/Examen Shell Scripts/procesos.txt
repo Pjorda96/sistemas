@@ -1,0 +1,72 @@
+root      1020  0.0  0.1  34732  3756 ?        Ssl  11:22   0:00 lightdm
+root      1035  0.0  0.1  29280  3476 ?        Sl   11:22   0:00 /usr/sbin/console-kit-daemon --no-daemon
+root      1146  0.3  0.2  73792  5212 ?        Ssl  11:22   0:08 /opt/teamviewer9/tv_bin/teamviewerd -f
+root      1147  0.1  0.0   9896  1464 ?        Sl   11:22   0:03 /usr/sbin/VBoxService
+root      1218  3.1  2.9 103024 57348 tty7     Rs+  11:22   1:19 /usr/bin/X :0 -auth /var/run/lightdm/roo
+root      1276  0.0  0.2  17248  4052 ?        Sl   11:22   0:00 /usr/lib/accountsservice/accounts-daemon
+root      1348  0.0  0.0   4628   860 tty1     Ss+  11:22   0:00 /sbin/getty -8 38400 tty1
+root      1420  0.0  0.1  17868  3804 ?        Sl   11:23   0:00 lightdm --session-child 12 19
+root      1443  0.0  0.1  28424  3784 ?        Sl   11:23   0:00 /usr/lib/upower/upowerd
+rtkit     1483  0.0  0.0  21328  1248 ?        SNl  11:23   0:00 /usr/lib/rtkit/rtkit-daemon
+juanmi    1620  0.0  0.2  61076  4084 ?        Sl   11:23   0:00 /usr/bin/gnome-keyring-daemon --daemoniz
+juanmi    1631  0.0  0.5  52604  9936 ?        Ssl  11:23   0:01 gnome-session --session=ubuntu-2d
+alba      1680  0.0  0.0  10536  1684 ?        Sl   11:23   0:00 /usr/bin/VBoxClient --clipboard
+juanmi    1688  0.0  0.0  10660  1644 ?        Sl   11:23   0:00 /usr/bin/VBoxClient --display
+ana    	  1692  0.0  0.0   9500  1164 ?        Sl   11:23   0:00 /usr/bin/VBoxClient --seamless
+carlos    1700  0.5  0.0  11180  1448 ?        Sl   11:23   0:14 /usr/bin/VBoxClient --draganddrop
+juanmi    1706  0.0  0.0   4076   208 ?        Ss   11:23   0:00 /usr/bin/ssh-agent /usr/bin/dbus-launch
+carlos    1709  0.0  0.0   3936   496 ?        S    11:23   0:00 /usr/bin/dbus-launch --exit-with-session
+alba      1710  0.1  0.1   6568  2788 ?        Ss   11:23   0:03 //bin/dbus-daemon --fork --print-pid 5 -
+juanmi    1722  0.1  0.8 139412 16672 ?        Sl   11:23   0:03 /usr/lib/gnome-settings-daemon/gnome-set
+ana    	  1728  0.0  0.1   9796  2316 ?        S    11:23   0:00 /usr/lib/gvfs/gvfsd
+juanmi    1730  0.0  0.1  35052  3196 ?        Sl   11:23   0:00 /usr/lib/gvfs//gvfs-fuse-daemon -f /home
+colord    1737  0.0  0.5  53648 10844 ?        Sl   11:23   0:00 /usr/lib/i386-linux-gnu/colord/colord
+juanmi    1738  0.5  0.7 152352 14280 ?        Sl   11:23   0:14 metacity
+alba      1751  0.3  0.2 101036  5536 ?        S<l  11:23   0:08 /usr/bin/pulseaudio --start --log-target
+juanmi    1753  0.0  0.1  10928  3028 ?        S    11:23   0:00 /usr/lib/i386-linux-gnu/gconf/gconfd-2
+alba      1754  0.1  1.3 117024 25620 ?        Sl   11:23   0:04 unity-2d-panel
+juanmi    1756  0.3  2.8 268104 56200 ?        Sl   11:23   0:09 unity-2d-shell
+manolo    1758  0.0  0.1  14100  2492 ?        S    11:23   0:00 /usr/lib/pulseaudio/pulse/gconf-helper
+ana    	  1763  0.0  0.4  58832  8476 ?        Sl   11:23   0:00 /usr/lib/gnome-settings-daemon/gnome-fal
+juanmi    1764  0.0  0.7 124144 15276 ?        Sl   11:23   0:00 nm-applet
+manolo    1766  0.0  1.2 137744 23424 ?        Sl   11:23   0:02 nautilus -n
+manolo    1770  0.1  0.5  51920  9932 ?        Sl   11:23   0:04 /usr/lib/bamf/bamfdaemon
+ana    	  1772  0.0  0.4  42444  8496 ?        Sl   11:23   0:00 /usr/lib/policykit-1-gnome/polkit-gnome-
+juanmi    1777  0.0  0.5  81784 11632 ?        Sl   11:23   0:00 bluetooth-applet
+juanmi    1794  0.0  0.2  31304  4384 ?        S    11:23   0:00 /usr/lib/gvfs/gvfs-gdu-volume-monitor
+root      1801  0.0  0.1  16028  3296 ?        Sl   11:23   0:00 /usr/lib/udisks/udisks-daemon
+root      1804  0.0  0.0   6552   732 ?        S    11:23   0:00 udisks-daemon: not polling any devices
+vicente   1810  0.0  0.1  21704  2144 ?        Sl   11:23   0:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+vicente   1813  0.0  0.1  10428  2116 ?        S    11:23   0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monito
+juanmi    1831  0.0  0.8  93656 16968 ?        Sl   11:23   0:01 /usr/lib/unity/unity-panel-service
+juanmi    1840  0.0  0.3 128144  6616 ?        Sl   11:23   0:00 /usr/lib/indicator-sound/indicator-sound
+alba      1841  0.0  0.3  69396  6304 ?        Sl   11:23   0:00 /usr/lib/indicator-session/indicator-ses
+juanmi    1843  0.0  0.1  32488  2400 ?        Sl   11:23   0:00 /usr/lib/dconf/dconf-service
+manolo    1845  0.0  0.3  64800  6800 ?        Sl   11:23   0:00 /usr/lib/indicator-datetime/indicator-da
+juanmi    1848  0.0  0.2  52324  4220 ?        Sl   11:23   0:00 /usr/lib/indicator-application/indicator
+vicente   1850  0.0  0.3  67984  6376 ?        Sl   11:23   0:00 /usr/lib/indicator-messages/indicator-me
+ana    	  1854  0.0  0.5  62528  9944 ?        Sl   11:23   0:00 /usr/lib/indicator-printers/indicator-pr
+juanmi    1873  0.0  0.1  11648  3592 ?        S    11:23   0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.6
+manolo    1911  0.0  0.1   7976  2356 ?        S    11:23   0:00 /usr/lib/geoclue/geoclue-master
+juanmi    1922  0.0  0.1   9800  2460 ?        S    11:23   0:00 /usr/lib/gvfs/gvfsd-burn --spawner :1.6
+carlos    1928  0.0  0.3  41444  5928 ?        Sl   11:23   0:00 /usr/lib/ubuntu-geoip/ubuntu-geoip-provi
+juanmi    1945  0.0  0.4  44268  9080 ?        Sl   11:23   0:00 /usr/lib/gnome-disk-utility/gdu-notifica
+juanmi    1955  0.0  0.2  64320  4780 ?        Sl   11:23   0:00 /usr/lib/indicator-appmenu/hud-service
+juanmi    1966  0.0  0.5  77976 11476 ?        Sl   11:23   0:00 /usr/lib/unity-lens-applications/unity-a
+ana    	  1968  0.0  0.2  85608  5708 ?        Sl   11:23   0:00 /usr/lib/unity-lens-files/unity-files-da
+juanmi    1970  0.0  0.3  78356  7312 ?        Sl   11:23   0:00 /usr/lib/unity-lens-music/unity-music-da
+carlos    1972  0.0  0.6  87320 12216 ?        Sl   11:23   0:00 /usr/bin/python /usr/lib/unity-lens-vide
+juanmi    1997  0.0  0.2  44136  4768 ?        Sl   11:23   0:00 /usr/bin/zeitgeist-daemon
+juanmi    2009  0.0  0.5  75168  9980 ?        Sl   11:23   0:00 telepathy-indicator
+vicente   2014  0.0  0.3  51300  7548 ?        Sl   11:23   0:00 /usr/lib/zeitgeist/zeitgeist-fts
+carlos    2019  0.0  0.2  53500  5588 ?        Sl   11:23   0:00 zeitgeist-datahub
+juanmi    2020  0.0  0.0   5444   280 ?        S    11:23   0:00 /bin/cat
+ana    	  2023  0.0  0.3  42284  6276 ?        Sl   11:23   0:00 /usr/lib/telepathy/mission-control-5
+juanmi    2032  0.0  0.4  91352  9224 ?        Sl   11:23   0:00 /usr/lib/gnome-online-accounts/goa-daemo
+carlos    2034  0.0  0.1  59440  3852 ?        Sl   11:23   0:00 /usr/lib/unity-lens-music/unity-musicsto
+juanmi    2037  0.3  0.8  93788 15752 ?        Sl   11:23   0:09 gnome-terminal
+carlos    2062  0.0  0.4  42856  8828 ?        Sl   11:23   0:00 gnome-screensaver
+vicente   2067  0.0  0.0   2400   720 ?        S    11:23   0:00 gnome-pty-helper
+carlos    2069  0.0  0.1   8876  3860 pts/1    Ss   11:23   0:02 bash
+vicente	  2109  0.0  0.8 101920 15972 ?        Sl   11:23   0:00 /usr/bin/python /usr/lib/unity-scope-vid
+juanmi    2178  0.0  0.6  61788 12492 ?        Sl   11:24   0:00 update-notifier

@@ -1,0 +1,10 @@
+comida			01/06/14	-25
+ingreso_proyecto	02/06/14	325
+lentillas		02/06/14	-30
+luz			03/06/14	-120
+alquiler		04/06/14	-500
+comida			05/06/14	-12
+nomina			07/06/14	650
+comida			09/06/14	-18
+centro_comercial	11/06/14	-45
+transferencia		15/06/14	95

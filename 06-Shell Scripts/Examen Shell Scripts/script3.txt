@@ -1,0 +1,11 @@
+Script 1:
+El código estaría correcto pero aborda el problema de una manera poco eficiente.
+
+Script 2:
+El código no aborda el problema que se pide. Para averiguar el resultado del problema hay que comparar el resto de la división con 0 pero no comprar el cociente.
+
+Script 3:
+El código estaría correcto pero aborda el problema de una manera poco eficiente y poco recomendable.
+
+Script 4:
+El código estaría correcto. Hace, conceptualmente, lo mismo que el script 1 pero de una forma todavía menos eficiente.
