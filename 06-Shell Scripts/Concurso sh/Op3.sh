@@ -37,14 +37,14 @@ function Mestring(){
 
 read -p "Introduce un usuario: " usuario
 	
-	for i in 1 `seq 1 $num`; do
+	for i in `seq 1 $num`; do
 	    us=`cat usuarios.txt | head -$i | tail -1 | awk '{print $1}'`
 	    Mesnum `cat usuarios.txt | head -$i | tail -1 | awk '{print $3}'`
 	    dialin=`cat usuarios.txt | head -$i | tail -1 | awk '{print $2}'`
-	    if [ "$us" =  "$usuario" ]; then
+	    if [ $us =  $usuario ]; then
 		if [ $meslin -gt $mesn ]; then
 		    mesn=$meslin
-		    if [ $dia -gt $dialin ]; then
+		    if [ $dialin -gt $dia ]; then
 			dia=$dialin
 		    fi
 		fi
