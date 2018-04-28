@@ -1,0 +1,14 @@
+read -p "Escribe una fecha o un usuario: " x
+
+cont=0
+dia=0
+mes=enero
+
+if [ `echo x |  wc -w` -eq 1 ]; then
+    for [ i in 1 `cat usuario.txt | wc -l` ]; do
+	usuario=`cat usuario.txt | head -$i | tail -1 | awk '{print $1}'`
+	mes=`cat usuario.txt | head -$i | tail -1 | awk '{print $3}'`
+	dia=`cat usuario.txt | head -$i | tail -1 | awk '{print $2}'`
+	if [ "$x"=="$usuario" ]; then
+	    cont = $cont + 1
+	    
