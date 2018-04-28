@@ -3,6 +3,7 @@ dia=0
 mesn=0
 mes=""
 usuario=""
+num=`cat usuarios.txt | wc -l`
 
 function Mesnum(){
      if [ "$1" = "enero" ]; then meslin=1; fi
@@ -41,29 +42,27 @@ read s
 case $s in
     1)
 	read -p "Introduce una fecha (dia mes): " dia mes
-	
-	for i in 1 `cat usuarios.txt | wc -l`; do
+
+	for i in `seq 1 $num`; do
 	    meslin=`cat usuarios.txt | head -$i | tail -1 | awk '{print $3}'`
 	    dialin=`cat usuarios.txt | head -$i | tail -1 | awk '{print $2}'`
-	    if [ "$mes" = "$meslin" ];then
-		if [ $dia -eq $dialin ]; then
-		    echo `cat usuarios.txt | head -$i | tail -1 | awk '{print $1}'`
-		    cont=$cont+1
-		fi
+	    if [ $mes == $meslin ] && [ $dia -eq $dialin ]; then
+		echo `cat usuarios.txt | head -$i | tail -1 | awk '{print $1}'`
+		cont=$((cont + 1))
 	    fi
 	done
-
+	
 	if [ $cont -eq 0 ]; then
 	    echo "No hay ningún login en esa fecha"
 	fi
 	;;
     2)
-	read -p "Introduce un usuario: " usuario
+        read -p "Introduce un usuario: " usuario
 
-	for i in 1 `cat usuarios.txt | wc -l`; do
+	for i in `seq 1 $num`; do
 	    us=`cat usuarios.txt | head -$i | tail -1 | awk '{print $1}'`
-	    if [ "$usuario"=="$us" ]; then
-		cont=$cont+1
+	    if [ $usuario = $us ]; then
+		cont=$((cont + 1))
 	    fi
 	done
 	

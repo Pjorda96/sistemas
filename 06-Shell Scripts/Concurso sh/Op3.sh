@@ -3,6 +3,7 @@ dia=0
 mesn=0
 mes=""
 usuario=""
+num=`cat usuarios.txt | wc -l`
 
 function Mesnum(){
      if [ "$1" = "enero" ]; then meslin=1; fi
@@ -34,47 +35,9 @@ function Mestring(){
      if [ $1 = 12 ]; then mes="diciembre"; fi
 }
 
-echo -e "Elige operación: \n1) Usuarios logueados un dia. \n2) Veces logueado \n3) Último login \nPor favor, escribir solo 1, 2 o 3: "
-
-read s
-
-case $s in
-    1)
-	read -p "Introduce una fecha (dia mes): " dia mes
+read -p "Introduce un usuario: " usuario
 	
-	for i in 1 `cat usuarios.txt | wc -l`; do
-	    meslin=`cat usuarios.txt | head -$i | tail -1 | awk '{print $3}'`
-	    dialin=`cat usuarios.txt | head -$i | tail -1 | awk '{print $2}'`
-	    if [ "$mes" = "$meslin" ] && [ $dia -eq $dialin ]; then
-		echo `cat usuarios.txt | head -$i | tail -1 | awk '{print $1}'`
-		cont=$cont+1
-	    fi
-	done
-
-	if [ $cont -eq 0 ]; then
-	    echo "No hay ningún login en esa fecha"
-	fi
-	;;
-    2)
-	read -p "Introduce un usuario: " usuario
-
-	for i in 1 `cat usuarios.txt | wc -l`; do
-	    us=`cat usuarios.txt | head -$i | tail -1 | awk '{print $1}'`
-	    if [ "$usuario"=="$us" ]; then
-		cont=$cont+1
-	    fi
-	done
-	
-	if [ $cont -ne 0 ]; then
-	    echo "El usuario $usuario se ha logueado $cont veces"
-	else
-	    echo "El usuario $usuario no se ha logueado"
-	fi
-	;;
-    3)
-	read -p "Introduce un usuario: " usuario
-	
-	for i in 1 `cat usuarios.txt | wc -l`; do
+	for i in 1 `seq 1 $num`; do
 	    us=`cat usuarios.txt | head -$i | tail -1 | awk '{print $1}'`
 	    Mesnum `cat usuarios.txt | head -$i | tail -1 | awk '{print $3}'`
 	    dialin=`cat usuarios.txt | head -$i | tail -1 | awk '{print $2}'`
@@ -96,9 +59,3 @@ case $s in
 	else
 	    echo "El último login del usuario $usuario es el día $dia de $mes"
 	fi
-        ;;
-    
-    *)
-	echo "Por favor, escribir solo 1, 2 o 3"
-	;;
-esac
