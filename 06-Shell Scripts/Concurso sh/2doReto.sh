@@ -11,3 +11,4 @@ elif [ `echo $num | grep [^M,D,C,L,X,V,I] | wc -l` -eq 0 ]; then
     convertir de romano a num
 else
     echo "ERROR: Escribe las letras en mayuscula."
+fi
