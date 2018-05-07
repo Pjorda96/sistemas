@@ -35,9 +35,9 @@ function Mestring(){
      if [ $1 = 12 ]; then mes="diciembre"; fi
 }
 
-echo -e "Elige operación: \n1) Usuarios logueados un dia. \n2) Veces logueado \n3) Último login \nPor favor, escribir solo 1, 2 o 3: "
+echo -e "Elige operación: \n1) Usuarios logueados un dia. \n2) Veces logueado \n3) Último login"
 
-read s
+read -p "Por favor, escribir solo 1, 2 o 3: " s
 
 case $s in
     1)

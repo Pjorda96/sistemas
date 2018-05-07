@@ -9,7 +9,7 @@ fi
 
 if [ $num -ge 100 ];then
     for i in `seq 1 9`;do
-	if [ $num -ge `expr $i \* 100` ];then
+	if [ `expr $num / 100` -eq $i ];then
 	    cent=$i
 	    num=$((num - `expr $i \* 100`))
 	fi
@@ -29,7 +29,7 @@ fi
 
 if [ $num -ge 10 ];then
     for i in `seq 1 9`;do
-	if [ $num -ge `expr $i \* 10` ];then
+	if [ `expr $num / 10` -eq $i ];then
 	    dec=$i
 	    num=$((num - `expr $i \* 10`))
 	fi
