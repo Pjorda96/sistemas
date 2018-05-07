@@ -1,3 +1,5 @@
+reccortar cadenas ${variable:18:15}
+
 Los números romanos I, X, C y M pueden repetirse hasta tres veces a la hora de escribir un número romano compuesto.
 
 Los números romanos V, L y D no pueden repetirse nunca.
