@@ -17,17 +17,46 @@ if [ `echo $((2003 / num)) | wc -w` -eq 1 ]; then
 		    num=$((num - `expr $i \* 100`))
 		fi
 	    done
-	    if [ $cent -eq 9 ];then cente="CM"; fi
-	    if [ $cent -eq 8 ];then cente="DCCC"; fi
-	    if [ $cent -eq 7 ];then cente="DCC"; fi
-	    if [ $cent -eq 6 ];then cente="DC"; fi
-	    if [ $cent -eq 5 ];then cente="D"; fi
-	    if [ $cent -eq 4 ];then cente="CD"; fi
-	    if [ $cent -eq 3 ];then cente="CCC"; fi
-	    if [ $cent -eq 2 ];then cente="CC"; fi
-	    if [ $cent -eq 1 ];then cente="C"; fi
-
-	    rom=$rom$cente
+	    D="D"
+	    M="M"
+	    C="C"
+	    if [ $cent -eq 9 ];then
+		rom=$rom$C$M
+	    fi
+	    if [ $cent -eq 8 ];then
+		rom=$rom$D$C
+		rom=$rom$C
+		rom=$rom$C
+		rom=$rom$C
+	    fi
+	    if [ $cent -eq 7 ];then
+		rom=$rom$D
+		rom=$rom$C
+		rom=$rom$C
+	    fi
+	    if [ $cent -eq 6 ];then
+		rom=$rom$D
+		rom=$rom$C
+	    fi
+	    if [ $cent -eq 5 ];then
+		rom=$rom$D
+	    fi
+	    if [ $cent -eq 4 ];then
+		rom=$rom$C
+		rom=$rom$D
+	    fi
+	    if [ $cent -eq 3 ];then
+		rom=$rom$C
+		rom=$rom$C
+		rom=$rom$C
+	    fi
+	    if [ $cent -eq 2 ];then
+		rom=$rom$C
+		rom=$rom$C
+	    fi
+	    if [ $cent -eq 1 ];then
+		rom=$rom$C
+	    fi
 	fi
 
 	if [ $num -ge 10 ];then
@@ -37,37 +66,140 @@ if [ `echo $((2003 / num)) | wc -w` -eq 1 ]; then
 		    num=$((num - `expr $i \* 10`))
 		fi
 	    done
-	    if [ $dec -eq 9 ];then dece="XC"; fi
-	    if [ $dec -eq 8 ];then dece="LXXX"; fi
-	    if [ $dec -eq 7 ];then dece="LXX"; fi
-	    if [ $dec -eq 6 ];then dece="LX"; fi
-	    if [ $dec -eq 5 ];then dece="L"; fi
-	    if [ $dec -eq 4 ];then dece="XL"; fi
-	    if [ $dec -eq 3 ];then dece="XXX"; fi
-	    if [ $dec -eq 2 ];then dece="XX"; fi
-	    if [ $dec -eq 1 ];then dece="X"; fi
-
-	    rom=$rom$dece
+	    L="L"
+	    C="C"
+	    X="X"
+	    if [ $dec -eq 9 ];then
+		rom=$rom$X
+		rom=$rom$C
+	    fi
+	    if [ $dec -eq 8 ];then
+		rom=$rom$L
+		rom=$rom$X
+		rom=$rom$X
+		rom=$rom$X
+	    fi
+	    if [ $dec -eq 7 ];then
+		rom=$rom$L
+		rom=$rom$X
+		rom=$rom$X
+	    fi
+	    if [ $dec -eq 6 ];then
+		rom=$rom$L
+		rom=$rom$X
+	    fi
+	    if [ $dec -eq 5 ];then
+		rom=$rom$L
+	    fi
+	    if [ $dec -eq 4 ];then
+		rom=$rom$X
+		rom=$rom$L
+	    fi
+	    if [ $dec -eq 3 ];then
+		rom=$rom$X
+		rom=$rom$X
+		rom=$rom$X
+	    fi
+	    if [ $dec -eq 2 ];then
+		rom=$rom$X
+		rom=$rom$X
+	    fi
+	    if [ $dec -eq 1 ];then
+		rom=$rom$X
+	    fi
 	fi
-
-	if [ $num -eq 9 ];then uni="IX"; fi
-	if [ $num -eq 8 ];then uni="VIII"; fi
-	if [ $num -eq 7 ];then uni="VII"; fi
-	if [ $num -eq 6 ];then uni="VI"; fi
-	if [ $num -eq 5 ];then uni="V"; fi
-	if [ $num -eq 4 ];then uni="IV"; fi
-	if [ $num -eq 3 ];then uni="III"; fi
-	if [ $num -eq 2 ];then uni="II"; fi
-	if [ $num -eq 1 ];then uni="I"; fi
-
-	rom=$rom$uni
+	
+	V="V"
+	X="X"
+	I="I"
+	if [ $num -eq 9 ];then
+            rom=$rom$I
+            rom=$rom$X
+	fi
+	if [ $num -eq 8 ];then
+            rom=$rom$V
+            rom=$rom$I
+            rom=$rom$I
+            rom=$rom$I
+	fi
+	if [ $num -eq 7 ];then
+            rom=$rom$V
+            rom=$rom$I
+            rom=$rom$I
+	fi
+	if [ $num -eq 6 ];then
+            rom=$rom$V
+            rom=$rom$I
+	fi
+	if [ $num -eq 5 ];then
+            rom=$rom$V
+	fi
+	if [ $num -eq 4 ];then
+            rom=$rom$I
+            rom=$rom$V
+	fi
+	if [ $num -eq 3 ];then
+            rom=$rom$I
+            rom=$rom$I
+            rom=$rom$I
+	fi
+	if [ $num -eq 2 ];then
+            rom=$rom$I
+            rom=$rom$I
+	fi
+	if [ $num -eq 1 ];then
+            rom=$rom$I
+	fi
 
 	echo "Es decimal y el número es $rom"
     else
 	echo "Número fuera de rango."
     fi
 elif [ `echo $num | grep [^M,D,C,L,X,V,I] | wc -l` -eq 0 ]; then
-    convertir de romano a num
+    for i in 1 `echo $num | wc -c`;do
+	arr[$i]=${num:$i:1}
+    done
+
+    cont=0
+    sum=0
+
+    for i in 1 `echo $num | wc -c`;do
+	
+	if [ ${arr[$i]} == "C" ] && [ arr[`expr $i + 1`] == "M" ];then
+	    sum=-100
+	fi
+	if [ ${arr[$i]} == "M" ];then
+	    sum=$((sum + 1000))
+	fi
+	if [ ${arr[$i]} == "D" ];then
+	    sum=$((sum + 500))
+	fi
+	if [ ${arr[$i]} == "X" ] && [ arr[`expr $i + 1`] == "C" ];then
+	    sum=$((sum - 10))
+	fi
+	if [ ${arr[$i]} == "C" ] && [ arr[`expr $i + 1`] != "M" ];then
+	    sum=$((sum + 100))
+	fi
+	if [ ${arr[$i]} == "L" ];then
+	    sum=$((sum + 50))
+	fi
+	if [ ${arr[$i]} == "X" ] && [ arr[`expr $i + 1`] != "C" ];then
+	    sum=$((sum + 10))
+	fi
+	if [ ${arr[$i]} == "I" ] && [ arr[`expr $i + 1`] == "V" ];then
+	    sum=$((sum - 1))
+	fi
+	if [ ${arr[$i]} == "V" ];then
+	    sum=$((sum + 5))
+	fi
+	if [ ${arr[$i]} == "I" ] && [ arr[`expr $i + 1`] != "V" ];then
+	    sum=$((sum + 1))
+	fi
+	
+    done
+
+    echo "El número es romano y el resultado es $sum"
+
 else
     echo "ERROR: Escribe las letras en mayuscula."
 fi
