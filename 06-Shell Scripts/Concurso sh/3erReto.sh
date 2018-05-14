@@ -4,7 +4,8 @@ read -p "Introduce el saldo a apostar: " saldo
 #12*4=48 48/6=8       max 8 jugadas
 cont=0
 
-$jugar=1
+jugar=1
+balance=0
 
 function repartir(){
     cart1=`echo $(($(($RANDOM%11))+1))`
@@ -58,6 +59,8 @@ while [ $cont -le 8 ] && [ $jugar -eq 1 ]; do
 	0)
 	    echo "Te has retirado, has perdido."
 	    echo "En la partida $cont el jugador ha perdido $apuesta unidades" >> registroJuego.txt
+	    cont=$((cont + 1))
+	    balance=$((balance-1))
 	    ;;
 	
         *)
@@ -65,17 +68,18 @@ while [ $cont -le 8 ] && [ $jugar -eq 1 ]; do
 	    saldo=$((saldo - newApuesta))
 	    
 	    echo "Las dos primeras cartas del crupier son:"
-	    for i in `seq 4 5`;do
+	    for i in `seq 1 6`;do
 		x="cart${i}"
 		y="palo${i}"
 		p=${!y}
-		if [ $i -ge 1 ] && [ $i -le 3 ]; then
+		if [ $i -ge 4 ] && [ $i -le 5 ]; then
 		    if [ $p -eq 1 ]; then f="picas"; fi
 		    if [ $p -eq 2 ]; then f="tréboles"; fi
 		    if [ $p -eq 3 ]; then f="corazones"; fi
 		    if [ $p -eq 4 ]; then f="diamantes"; fi
 		    echo "${!x} $f"
 		fi
+		echo "${!x} ${!y}" >> registroCARTAS.txt
 	    done
 
 	    echo "Para continuar debe doblar su apuesta"
@@ -90,6 +94,8 @@ while [ $cont -le 8 ] && [ $jugar -eq 1 ]; do
 		"No")
 		    echo "Te has retirado, has perdido."
 		    echo "En la partida $cont el jugador ha perdido $apuesta unidades" >> registroJuego.txt
+		    balance=$((balance - apuesta))
+		    cont=$((cont + 1))
 		    ;;
 
 		"Si")
@@ -101,14 +107,123 @@ while [ $cont -le 8 ] && [ $jugar -eq 1 ]; do
 			saldo=0
 		    fi
 
-		    IA para ver si se retira o sigue (punto 7)
+		    if [ $((cart1 + cart2 + cart3)) -gt $((cart4 + cart 5 + 12)) ]; then
+			echo "¡¡HAS GANADO!!"
+			echo "Se han sumado $((apuesta + apuesta)) unidades a tu saldo"
+			apuesta=$((apuesta + apuesta))
+			saldo=$((saldo + apuesta))
+			balance=$((balance + apuesta))
 
+			cont=$((cont + 1))
+			echo "En la partida $cont el jugador ha ganado $apuesta unidades" >> registroJuego.txt
+		    elif [ $((cart1 + cart2 + cart3)) -lt $((cart4 + cart 5 - 12)) ]; then
+			echo "Has perdido"
+			echo "Has perdido $apuesta unidades"
+			balance=$((balance - apuesta))
 
+			cont=$((cont + 1))
+			echo "En la partida $cont el jugador ha perdido $apuesta unidades" >> registroJuego.txt
+		    else
 
-		    
+			diferencia=$((cart1 + cart2 + cart3 - (cart4 + cart 5)))
+			corte=$((diferencia/2))
+			rand=`echo $(($(($RANDOM%diferencia))+1))`
+			
+			if [ $rand -lt $corte ]; then
+			    echo "¡¡HAS GANADO!!"
+			    echo "El crupier se ha retirado"
+			    echo "Se han sumado $((apuesta + apuesta)) unidades a tu saldo"
+			    apuesta=$((apuesta + apuesta))
+			    saldo=$((saldo + apuesta))
+			    balance=$((balance + apuesta))
+
+			    cont=$((cont + 1))
+			    echo "En la partida $cont el jugador ha ganado $apuesta unidades" >> registroJuego.txt
+			else
+			    echo "Tus cartas son:"
+			    for i in `seq 1 3`;do
+				x="cart${i}"
+				y="palo${i}"
+				p=${!y}
+				if [ $i -ge 1 ] && [ $i -le 3 ]; then
+				    if [ $p -eq 1 ]; then f="picas"; fi
+				    if [ $p -eq 2 ]; then f="tréboles"; fi
+				    if [ $p -eq 3 ]; then f="corazones"; fi
+				    if [ $p -eq 4 ]; then f="diamantes"; fi
+				    echo "${!x} $f"
+				fi
+			    done
+			    
+			    echo "Las cartas del crupier son:"
+			    for i in `seq 4 6`;do
+				x="cart${i}"
+				y="palo${i}"
+				p=${!y}
+				if [ $i -ge 4 ] && [ $i -le 6 ]; then
+				    if [ $p -eq 1 ]; then f="picas"; fi
+				    if [ $p -eq 2 ]; then f="tréboles"; fi
+				    if [ $p -eq 3 ]; then f="corazones"; fi
+				    if [ $p -eq 4 ]; then f="diamantes"; fi
+				    echo "${!x} $f"
+				fi
+			    done
+
+			    if [ $((carta1 + carta2 + carta3)) -eq $((carta4 + carta5 + carta6)) ];then
+				echo "Mala suerte, empate"
+				echo "Se te han devuelto $apuesta unidades a tu saldo"
+				saldo=$((saldo + apuesta))
+
+				cont=$((cont + 1))
+				echo "En la partida $cont el jugador ha empatado" >> registroJuego.txt
+			    elif [ $((carta1 + carta2 + carta3)) -gt $((carta4 + carta5 + carta6)) ];then
+				#Frase típica del blackjack
+				echo "¡¡Winner, Winner Chicken Dinner!!"
+				apuesta=$((apuesta + apuesta))
+				echo "Se han sumado $apuesta unidades a tu saldo"
+				saldo=$((saldo + apuesta))
+				balance=$((balance + apuesta))
+
+				cont=$((cont + 1))
+				echo "En la partida $cont el jugador ha ganado $apuesta unidades" >> registroJuego.txt
+			    elif [ $((carta1 + carta2 + carta3)) -lt $((carta4 + carta5 + carta6)) ];then
+				echo "La banca siempre gana"
+				echo "Has perdido $apuesta unidades"
+				balance=$((balance - apuesta))
+
+				cont=$((cont + 1))
+				echo "En la partida $cont el jugador ha perdido $apuesta unidades" >> registroJuego.txt
+			    fi
+			fi
+			
+		    fi
 		    ;;
 	    esac
 	    ;;
-	esac    
+    esac
+
+    if [ $saldo -gt 0 ]; then
+	read -p "¿Jugar de nuevo? (Si/No): " repetir
+
+	while [ "$repetir" != "SI" ] && [ "$repetir" != "No" ]; do
+		echo "Escriba Si o No"
+		read -p "¿Jugar de nuevo? (Si/No): " repetir
+
+		if [ "$repetir" == "Si" ]; then
+		    jugar=1
+		else
+		    jugar=0
+		fi
+		
+	done
+    fi
+        
 done
 
+for i in `cat registroJUEGO.txt | wc -l`;do
+    echo `cat registroJUEGO.txt | head -$i | tail -1`
+done
+
+echo "El balance ha sido de $balance"
+
+rm registroCARTAS.txt
+rm registroJUEGO.txt
