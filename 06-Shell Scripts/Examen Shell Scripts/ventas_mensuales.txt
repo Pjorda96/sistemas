@@ -1,0 +1,15 @@
+distrito1	enero	25
+distrito1	febrero 40
+distrito2	febrero	45
+distrito2	marzo 50
+distrito1      abril 24
+distrito2      abril 29
+distrito1      mayo  45
+distrito2      junio 40
+distrito1      julio 35
+distrito1      septiembre	30
+distrito1      octubre	31
+distrito2      octubre	25
+distrito2      noviembre	20
+distrito1      diciembre	34
+distrito2      diciembre	30
