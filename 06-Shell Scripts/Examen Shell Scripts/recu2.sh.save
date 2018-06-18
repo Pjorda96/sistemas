@@ -1,6 +1,0 @@
-contVenta=`cat ventas_mensuales | wc -l`
-
-suma=0
-
-for i in `seq i $contVenta`; do
-	if [ `cat ventas_mensuales.txt | head -$i | tail -1 | awk '{print $1}'` == "distrito1" ] || [ `cat ventas_mensuales
